@@ -1,12 +1,9 @@
 package TicTacToe.SinglePlayer;
 
-//import java.util.ArrayList;
-//import java.util.Arrays;
 import java.util.Scanner;
 class Hard extends Thread
 {
     static Character board[]={' ',' ',' ',' ',' ',' ',' ',' ',' '};
-    //static ArrayList<Character> al = new ArrayList<>(Arrays.asList(' ',' ',' ',' ',' ',' ',' ',' ',' '));
     static char player[]={'X','O'};
     static int turn=0;
     static int counter=0;
