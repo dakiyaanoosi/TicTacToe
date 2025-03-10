@@ -1,13 +1,10 @@
 package TicTacToe;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 class TwoPlayers extends Thread
 {
     static Character board[]={' ',' ',' ',' ',' ',' ',' ',' ',' '};
-    static ArrayList<Character> al = new ArrayList<>(Arrays.asList(' ',' ',' ',' ',' ',' ',' ',' ',' '));
     static char player[]={'X','O'};
     static int turn=0;
     static int counter=0;
@@ -66,7 +63,14 @@ class TwoPlayers extends Thread
         }
         System.out.println();
                 
-        position=al.indexOf(' ');
+        for(int i=0;i<9;i++)
+        {
+            if(board[i]==' ')
+            {
+                position=i;
+                break;
+            }
+        }
         board[position]=player[turn];
         print();
         counter++;
@@ -119,7 +123,6 @@ class TwoPlayers extends Thread
                 input(sc);
 
                 board[position]=player[turn];
-                al.set(position,player[turn]);
 
                 print();
                 counter++;

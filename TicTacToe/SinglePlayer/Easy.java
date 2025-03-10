@@ -1,12 +1,9 @@
 package TicTacToe.SinglePlayer;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 class Easy extends Thread
 {
     static Character board[]={' ',' ',' ',' ',' ',' ',' ',' ',' '};
-    static ArrayList<Character> al = new ArrayList<>(Arrays.asList(' ',' ',' ',' ',' ',' ',' ',' ',' '));
     static char player[]={'X','O'};
     static int turn=0;
     static int counter=0;
@@ -65,7 +62,14 @@ class Easy extends Thread
         }
         System.out.println();
                 
-        position=al.indexOf(' ');
+        for(int i=0;i<9;i++)
+        {
+            if(board[i]==' ')
+            {
+                position=i;
+                break;
+            }
+        }
         board[position]=player[turn];
         print();
         counter++;
@@ -175,7 +179,6 @@ class Easy extends Thread
                 input(sc);
 
                 board[position]=player[turn];
-                al.set(position,player[turn]);
                 if(turn==1 || counter==7)
                 {
                     System.out.println("\nComputer");
