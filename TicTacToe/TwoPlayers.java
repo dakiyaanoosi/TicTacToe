@@ -1,7 +1,7 @@
 package TicTacToe;
 
 import java.util.Scanner;
-class TwoPlayers extends Thread
+class TwoPlayers
 {
     static Character board[]={' ',' ',' ',' ',' ',' ',' ',' ',' '};
     static char player[]={'X','O'};
@@ -49,7 +49,7 @@ class TwoPlayers extends Thread
         {
             try
             {
-                sleep(14);
+                Thread.sleep(14);
             }
             catch(Exception e)
             {
